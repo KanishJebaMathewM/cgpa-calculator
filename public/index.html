@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CGPA Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <div class="particles" id="particles"></div>
+    
+    <div class="container">
+        <h1 class="animate__animated animate__fadeIn">CGPA Calculator</h1>
+        <form id="cgpa-form">
+            <div id="subjects">
+                <div class="subject animate__animated animate__fadeIn">
+                    <div>
+                        <label for="grade">Grade</label>
+                        <select name="grade" required>
+                            <option value="">Select Grade</option>
+                            <option value="10.0">O (10.0)</option>
+                            <option value="9.0">A+ (9.0)</option>
+                            <option value="8.0">A (8.0)</option>
+                            <option value="7.0">B+ (7.0)</option>
+                            <option value="6.0">B (6.0)</option>
+                            <option value="5.0">C (5.0)</option>
+                            <option value="0.0">F (0.0)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="credit">Credits</label>
+                        <input type="number" name="credit" min="1" max="4" step="1" required placeholder="e.g. 3.0">
+                    </div>
+                    <button type="button" class="remove-subject">×</button>
+                </div>
+            </div>
+            
+            <div class="button-group">
+                <button type="button" id="add-subject">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    Add Subject
+                </button>
+                <button type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    Calculate CGPA
+                </button>
+            </div>
+        </form>
+        <div id="result"></div>
+        
+        <div class="grade-info">
+            <p>Grade Scale Reference</p>
+            <div class="grade-scale">
+                <div class="grade-item">
+                    <div class="grade-color" style="background-color: #4CAF50 ;"></div>
+                    <span>O = 10.0</span>
+                </div>
+		<div class="grade-item">
+                    <div class="grade-color" style="background-color: #8BC34A;"></div>
+                    <span>A+ = 9.0</span>
+                </div>
+		<div class="grade-item">
+                    <div class="grade-color" style="background-color: #CDDC39;"></div>
+                    <span>A = 8.0</span>
+                </div>
+                <div class="grade-item">
+                    <div class="grade-color" style="background-color: #FFEB3B;"></div>
+                    <span>B+ = 7.0</span>
+                </div>
+                <div class="grade-item">
+                    <div class="grade-color" style="background-color: #FFC107;"></div>
+                    <span>B = 6.0</span>
+                </div>
+                <div class="grade-item">
+                    <div class="grade-color" style="background-color: #FF9800;"></div>
+                    <span>C = 5.0</span>
+                </div>
+                <div class="grade-item">
+                    <div class="grade-color" style="background-color: #F44336;"></div>
+                    <span>F = 0.0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    </body>
+</html>

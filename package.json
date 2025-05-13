@@ -1,0 +1,16 @@
+{
+  "name": "cgpa-calculator",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Kanish Jeba Mathew M",
+  "license": "ISC",
+  "description": "Advanced CGPA Calculator with Node and Express",
+  "dependencies": {
+    "cgpa-calculator": "file:",
+    "express": "^5.1.0"
+  }
+}
